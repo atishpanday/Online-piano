@@ -68,3 +68,74 @@
   font-style: italic;
   color: white;
 }
+
+.recorder {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.screen {
+  height: 100px;
+  width: 600px;
+  border-radius: 2px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.on {
+  box-shadow: 0 0 5px 2px #0ff;
+  background-color: #0ff;
+}
+
+.off {
+  box-shadow: none;
+  background-color: gray;
+}
+
+.screen-notes {
+  font-family: monospace;
+  color: white;
+  margin: 2px;
+}
+
+.welcome-txt {
+  font-family: monospace;
+  font-size: xx-large;
+  font-weight: 500;
+  color: white;
+}
+
+.btn {
+  height: 40px;
+  min-width: 60px;
+  width: fit-content;
+  font-family: monospace;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  background-color: white;
+  margin: 5px;
+}
+
+.stop {
+  background-color: red;
+  box-shadow: 0 0 2px 2px red;
+  color: white;
+}
+
+.start {
+  background-color: red;
+  box-shadow: none;
+  color: white;
+}
+
+.recording-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

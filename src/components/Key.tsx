@@ -1,6 +1,6 @@
+import React from 'react'
 import { mapping } from '../helper/keyMapping.ts';
 import '../styles/styles.css'
-import React from 'react'
 
 type KeyProps = {
     index: number,
@@ -10,7 +10,6 @@ type KeyProps = {
 }
 
 const Key = ({ index, id, keyNote, pressed }: KeyProps) => {
-
     return (
         <div
             className={`${keyNote && keyNote.length > 1 ? 'black key' : 'white key'} ${pressed === id ? 'pressed' : ''}`}>
