@@ -12,7 +12,8 @@ type KeyProps = {
 const Key = ({ index, id, keyNote, pressed }: KeyProps) => {
     return (
         <div
-            className={`${keyNote && keyNote.length > 1 ? 'black key' : 'white key'} ${pressed === id ? 'pressed' : ''}`}>
+            className={`${keyNote && keyNote.length > 1 ? 'black key' : 'white key'} ${pressed === id ? 'pressed' : ''}`}
+            id={keyNote}>
             <text className={keyNote && keyNote.length > 1 ? 'white-mapping' : 'black-mapping'}>{mapping[index]}</text>
             <text className={keyNote && keyNote.length > 1 ? 'white-note' : 'black-note'}>{keyNote}</text>
         </div>

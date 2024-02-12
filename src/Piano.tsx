@@ -20,22 +20,23 @@ const Piano = () => {
         setNotesPlayed([])
     }
 
-    const handleKeyPress = (event: KeyboardEvent<HTMLDivElement>) => {
+    const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
         setPressed(keyMapping[event.key]);
-        playSound(event);
+        playSound(event.key);
         setNotesPlayed(prev => [...prev, keyMapping[event.key]]);
     }
+
     const handleKeyUp = (event: KeyboardEvent<HTMLDivElement>) => {
         setPressed('');
     }
 
-    const playSound = (event: KeyboardEvent<HTMLDivElement>) => {
-        synth.triggerAttackRelease(keyMapping[event.key], 0.001);
+    const playSound = (key: string) => {
+        synth.triggerAttackRelease(keyMapping[key], 0.001);
     }
 
     const playRecording = (notesPlayed: string[]) => {
         notesPlayed.map((note, i) => (
-            synth.triggerAttackRelease(note, 0.001, `+${i * 0.2}`)
+            synth.triggerAttackRelease(note, 0.001, `+${i * 0.25}`)
         ))
     }
 
